@@ -1,7 +1,12 @@
+//game logistics still add in user data
+
 function checkElegibility {
-	if (cardDes.cardsnumber == cardJustPlayed.number)
+	if (cardDes.deck.number == cardDes.cardJustPlayed.number){
 		socet.emit(allClear)
+	}
 	else
-		if (cardDes.color == cardJustPlayed.color)
+		if (cardDes.color == cardJustPlayed.color){
 			socet.emit(allClear)
+		}
 }
+//end game logistics
