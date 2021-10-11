@@ -255,7 +255,7 @@ socket.on('userList',function(data){
 				myUserlistString = string;
 			}
 		}
-		
+		//console.log(userListString)
 		userListString = userListString + '<' + header + click + color + '>' + string + ender;
 		//console.log( "player", data[i].userName, "myTurn", myTurn, "id", data[i].id, socket.id, "color", data[i].color, yourTurnColor);
 	}
@@ -392,7 +392,9 @@ function resizeDrawings(){
 	pickRed.updateSize((canvas.width/5) * 2,canvas.width/4,canvas.width/34,canvas.width/19);
 	skipTurn.updateSize(canvas.width/4,canvas.height/2,(canvas.width/34) * 5,(canvas.width/19) * 5);
 	
-	tilesDiscarded.updateSize(canvas.width / 2,canvas.height / 2,canvas.width / 34,canvas.width / 19);
+	if(tilesDiscarded != undefined){
+		tilesDiscarded.updateSize(canvas.width / 2,canvas.height / 2,canvas.width / 34,canvas.width / 19);
+	}
 }
 
 function changeName(userId){
