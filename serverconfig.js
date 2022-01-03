@@ -1,4 +1,4 @@
 module.exports={
 	serverPath:"unoServer.js",
-	clientFolder:'htmlUno'
+	standalownPort:8080
 }
